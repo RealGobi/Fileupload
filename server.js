@@ -1,8 +1,8 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
+const PORT = 5001;
 
 const app = express();
-
 app.use(fileUpload());
 
 // end point
@@ -24,4 +24,4 @@ app.post('/upload', (req, res) => {
 
 })
 
-app.listen(5000, () => console.log('Server started on port 5000'));
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
