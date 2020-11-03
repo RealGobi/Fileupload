@@ -3,6 +3,12 @@ import React, { Fragment, useState } from 'react';
 const FileUpload = () => {
   const [file, setFile] = useState('');
   const [fileName, setFileName] = useState('Choose file...');
+
+  const onChangeHandler= e => {
+      setFile(e.target.files[0]);
+      setFileName(e.target.files[0].name);
+  }
+
   return (
     <Fragment>
       <form>
